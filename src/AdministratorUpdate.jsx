@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { useParams } from "react-router-dom";
+import { useParams , useNavigate } from "react-router-dom";
 
 
 function AdministratorUpdate(){
-
+    let navigate = useNavigate();
     let params = useParams()
     const dato = JSON.parse(window.localStorage.getItem(params.AdministratorUpdate));
 
@@ -20,6 +20,7 @@ function AdministratorUpdate(){
 const handleUpdate=()=>{
 
     window.localStorage.setItem(params.AdministratorUpdate,JSON.stringify(employeAct))
+    navigate(`/administrator`)
 }
 const handleChange =(e)=>{
     setEmployeeAct({

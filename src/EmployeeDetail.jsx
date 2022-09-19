@@ -65,7 +65,7 @@ function EmployeeDetail(){
                 employeAct.vacunado === "vacunado" ?
                 (
                     <>
-                    <select onChange={handleChange} value={employeAct.vacuna} name='vacuna'>
+            <select onChange={handleChange} value={employeAct.vacuna} name='vacuna'>
                 <option value="sputnik">Sputnik</option>
                 <option value="aztrazeneca">aztrazeneca</option>
                 <option value="pfizer">Pfizer</option>
