@@ -58,11 +58,14 @@ function EmployeeDetail(){
             <input type='text' name='telefono' onChange={handleChange} value={employeAct.telefono}></input>
             <label>Estado de Vacunacion</label>
             <select onChange={handleChange} value={employeAct.vacunado} name='vacunado'>
-                <option value="vacunado">Vacunado</option>
                 <option value="novacunado">No Vacunado</option>
+                <option value="vacunado">Vacunado</option>
             </select>
-
-            <select onChange={handleChange} value={employeAct.vacuna} name='vacuna'>
+            {
+                employeAct.vacunado === "vacunado" ?
+                (
+                    <>
+                    <select onChange={handleChange} value={employeAct.vacuna} name='vacuna'>
                 <option value="sputnik">Sputnik</option>
                 <option value="aztrazeneca">aztrazeneca</option>
                 <option value="pfizer">Pfizer</option>
@@ -77,7 +80,9 @@ function EmployeeDetail(){
                 <option value= '2'>2</option>
                 <option value= '3'>3</option>
             </select>
-
+                </>
+                ):null
+            }
             <button onClick={handleSave}>Save Inf</button>
         </>
     )
