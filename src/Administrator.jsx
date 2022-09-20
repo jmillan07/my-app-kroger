@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
+import './App.css'
 
 import AdministratorDetail from './AdministratorDetail'
 
@@ -129,7 +130,7 @@ export function Administrator()  {
     return (
         <>
      
-        <form style={{display: "flex","flex-direction":"column",alignItems:"flex-start",justifyContent:"center",width:"500px"}} onSubmit={newlletter.handleSubmit}>
+        <form className="container" onSubmit={newlletter.handleSubmit}>
             <div style={{disply:"flex",width:500}}>
                 <label>Cedula</label>
                 <input type="text" id="cedula" name="cedula" value={newlletter.values.cedula} onChange={newlletter.handleChange}/>

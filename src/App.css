@@ -39,3 +39,61 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.table {
+  border-collapse: collapse
+}
+
+.tableCell {
+  border: 1px solid gray;
+  margin: 0;
+  padding: 5px 10px;
+  width: max-content;
+  min-width: 150px
+}
+
+.container {
+  padding: 20px;
+  border: 1px solid #F0F8FF;
+  border-radius: 15px;
+  width: max-content;
+  margin-bottom: 40px;
+
+}
+
+.containerEmple {
+  padding: 5px;
+  border: 1px solid #F0F8FF;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h4{
+  text-align: left;
+}
+
+.tittleEmple {
+  padding: auto;
+  margin: 5px;
+}
+
+.inputs {
+  margin-bottom: 5px
+};
+.submitBtn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: lightseagreen;
+  font-size: 14px;
+  border-radius: 5px
+}
+
+.contenButton {
+  display: flex;
+  width: 100px;
+}

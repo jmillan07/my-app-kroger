@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import './App.css'
 
 function AdministratorDetail(props){
 
@@ -121,16 +122,16 @@ function AdministratorDetail(props){
           value={hasta}
         ></input>
             <button onClick={handleLimpiar}>Limpiar</button>
-    <table>
+    <table className='table'>
       <thead>
         <tr>
-            <th>Cedula</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Usuario</th>
-            <th>Vacunado</th>
-            <th>Tipo Vacunado</th>
-            <th>Fecha Vacuna</th>
+            <th className='tableCell'>Cedula</th>
+            <th className='tableCell'>Nombre</th>
+            <th className='tableCell'>Apellido</th>
+            <th className='tableCell'>Usuario</th>
+            <th className='tableCell'>Vacunado</th>
+            <th className='tableCell'>Tipo Vacunado</th>
+            <th className='tableCell'>Fecha Vacuna</th>
         </tr>
       </thead>
       <tbody>
@@ -144,10 +145,16 @@ function AdministratorDetail(props){
                 <th>{e.vacunado}</th>
                 <th>{e.vacuna}</th>
                 <th>{e.fechVacuna}</th>
-                <button onClick={()=>handleEliminar(e.key)}>Eliminar</button>
-                <button onClick={()=>{
+                <th>
+                <div className='contenButton'>
+
+                <button className='submitBtn' onClick={()=>handleEliminar(e.key)}>Eliminar</button>
+                <button className='submitBtn' onClick={()=>{
                     navigate(`/AdministratorUpdate/${e.key}`);
                 }}>Update</button>
+                </div>
+                    
+                </th>
             </tr>
             )
         })}

@@ -32,26 +32,32 @@ export function Employee(){
     return (
         <>
         <h1>Empleador</h1>
+        <div className='container'>
+
             <input
             autoComplete="off"
             onChange={handleInput}
-            placeholder="username"
+            placeholder="Usuario"
             name="username"
             type="text"
             value={usernameInput}
+            className="inputs"
+          
             />
 
             <input
-            placeholder="password"
+            placeholder="Password"
             name="password"
             type="password"
             onChange={handleInputPass}
             value={passInput}
+            className="inputs"
             />
  
             <button onClick={login}>login</button>
 
             <Outlet/>
+            </div>
         </>
     )
 }
