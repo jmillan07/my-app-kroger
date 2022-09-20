@@ -8,6 +8,7 @@ function Index(){
         <>
         <h1>Sistema de Imventarios de vacunacion</h1> 
             <nav>
+                <Link to="/">Inicio</Link> |{" "}
                 <Link to="administrator">Administrador</Link> |{" "}
                 <Link to="employee">Empleado</Link>
             </nav>
